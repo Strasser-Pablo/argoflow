@@ -19,7 +19,7 @@ data:
     enablePasswordDB: true
     staticPasswords:
     - email: strasserpablo@bluewin.ch
-      hash: $2y$12$4K/VkmDd1q1Orb3xAt82zu8gk7Ad6ReFR4LCP9UeYE90NLiN9Df72
+      hash: $2b$10$7ibwzSItL2qXtMF0EiFO3.ckEuWsxDUOgg0WSNiCuKfi6oEcUytdS
       # https://github.com/dexidp/dex/pull/1601/commits
       # FIXME: Use hashFromEnv instead
       username: pablo
