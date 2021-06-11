@@ -14,14 +14,9 @@ spec:
       name: example-issuer-account-key
     # Add a single challenge solver, HTTP01 using nginx
     solvers:
-    - dns01:
-        webhook:
-          groupName: acme.infomaniak.com
-          solverName: infomaniak
-          config:
-            apiTokenSecretRef:
-              name: infomaniak-api-credentials
-              key: api-token
+      - http01:
+        ingress:
+          class: nginx
 ---
 apiVersion: cert-manager.io/v1
 kind: ClusterIssuer
@@ -39,11 +34,6 @@ spec:
       name: infomaniak-issuer-account-key
     # Add a single challenge solver, HTTP01 using nginx
     solvers:
-    - dns01:
-        webhook:
-          groupName: acme.infomaniak.com
-          solverName: infomaniak
-          config:
-            apiTokenSecretRef:
-              name: infomaniak-api-credentials
-              key: api-token
+      - http01:
+        ingress:
+          class: nginx
