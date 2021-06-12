@@ -11,4 +11,5 @@ resources:
 - kubeflow-cluster-roles.yaml
 - ingress.yaml
 - kubeflow-service.yaml
+- nginx.yaml
 # - monitoring/
