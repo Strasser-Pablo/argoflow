@@ -10,6 +10,4 @@ resources:
 - gateway_authorizationpolicy.yaml
 - kubeflow-cluster-roles.yaml
 - ingress.yaml
-- kubeflow-service.yaml
-- nginx.yaml
 # - monitoring/
