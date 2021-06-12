@@ -9,10 +9,10 @@ metadata:
 spec:
   tls:
     - hosts:
-        - kubeflow.strasser-family.ch
-      secretName: kubeflow-ingress-cert2
+        - kubeflow3.strasser-family.ch
+      secretName: kubeflow3-ingress-cert2
   rules:
-    - host: kubeflow.strasser-family.ch
+    - host: kubeflow3.strasser-family.ch
       http:
         paths:
           - path: /
