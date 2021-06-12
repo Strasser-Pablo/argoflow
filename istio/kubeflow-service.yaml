@@ -9,17 +9,14 @@ spec:
       protocol: TCP
       port: 15021
       targetPort: 15021
-      nodePort: 31364
     - name: http2
       protocol: TCP
       port: 80
       targetPort: 8080
-      nodePort: 31812
     - name: https
       protocol: TCP
       port: 443
       targetPort: 8443
-      nodePort: 31715
   selector:
     app: istio-ingressgateway
     istio: ingressgateway
