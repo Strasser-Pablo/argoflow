@@ -1,18 +1,18 @@
 kind: Ingress
 apiVersion: networking.k8s.io/v1beta1
 metadata:
-  name: ingress-istio
+  name: ingress-istio2
   namespace: istio-system
   annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-prod
+    cert-manager.io/cluster-issuer: letsencrypt-prod2
     kubernetes.io/ingress.class: ingress
 spec:
   tls:
     - hosts:
-        - kubeflow.strasser-kub.ch
-      secretName: kubeflow-ingress-cert
+        - kubeflow.strasser-family.ch
+      secretName: kubeflow-ingress-cert2
   rules:
-    - host: kubeflow.strasser-kub.ch
+    - host: kubeflow.strasser-family.ch
       http:
         paths:
           - path: /
