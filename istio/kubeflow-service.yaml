@@ -5,8 +5,7 @@ metadata:
   namespace: istio-system
 spec:
   ports:
-    - name: status-port
-      protocol: TCP
+    - protocol: TCP
       port: 15021
       targetPort: 15021
     - protocol: TCP
