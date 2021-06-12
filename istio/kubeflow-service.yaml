@@ -19,6 +19,5 @@ spec:
       targetPort: 8443
   selector:
     app: istio-ingressgateway
-    istio: ingressgateway
   type: ClusterIP
   sessionAffinity: None
