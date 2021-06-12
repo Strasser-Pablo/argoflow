@@ -19,4 +19,4 @@ spec:
       - name: nginx
         image: pablostrasser/nginx-test:latest
         ports:
-        - containerPort: 443
+        - containerPort: 80
