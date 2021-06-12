@@ -6,4 +6,6 @@ metadata:
   name: global-deny-all
   namespace: istio-system
 spec:
-  {}
+  action: ALLOW
+  rules:
+    - {}
