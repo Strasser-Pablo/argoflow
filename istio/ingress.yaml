@@ -19,4 +19,4 @@ spec:
             pathType: ImplementationSpecific
             backend:
               serviceName: istio-ingressgateway
-              servicePort: 443
+              servicePort: 31715
