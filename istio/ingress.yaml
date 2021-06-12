@@ -13,7 +13,7 @@ spec:
       secretName: kubeflow-ingress-cert
   rules:
     - host: kubeflow.strasser-kub.ch
-      https:
+      http:
         paths:
           - path: /
             pathType: ImplementationSpecific
