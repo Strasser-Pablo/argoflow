@@ -1,7 +1,7 @@
 kind: Ingress
 apiVersion: networking.k8s.io/v1beta1
 metadata:
-  name: ingress-istio2
+  name: ingress-istio3
   namespace: default
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod2
@@ -18,4 +18,4 @@ spec:
           - path: /
             backend:
               serviceName: istio-ingressgateway-service2 
-              servicePort: 80 
+              servicePort: 443 

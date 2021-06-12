@@ -1,14 +1,14 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: istio-ingressgateway-service2
+  name: istio-ingressgateway-service3
   namespace: default
 spec:
   ports:
     - name: p2
       protocol: TCP
-      port: 80
-      targetPort: 80
+      port: 443
+      targetPort: 443
   selector:
     app: nginx
   type: ClusterIP
