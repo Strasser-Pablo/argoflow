@@ -5,6 +5,7 @@ metadata:
   namespace: istio-system
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
+    kubernetes.io/ingress.class: istio
 spec:
   tls:
     - hosts:
@@ -18,4 +19,4 @@ spec:
           - path: /
             backend:
               serviceName: istio-ingressgateway 
-              servicePort: 443
+              servicePort: https
