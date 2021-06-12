@@ -1,7 +1,7 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: istio-ingressgateway-service
+  name: istio-ingressgateway-service2
   namespace: istio-system
 spec:
   ports:
