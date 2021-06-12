@@ -23,6 +23,6 @@ spec:
   selector:
     app: istio-ingressgateway
     istio: ingressgateway
-  type: ClusterIp
+  type: ClusterIP
   sessionAffinity: None
   externalTrafficPolicy: Cluster
