@@ -22,4 +22,3 @@ spec:
     istio: ingressgateway
   type: ClusterIP
   sessionAffinity: None
-  externalTrafficPolicy: Cluster
