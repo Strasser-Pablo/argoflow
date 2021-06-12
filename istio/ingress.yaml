@@ -16,7 +16,6 @@ spec:
       http:
         paths:
           - path: /
-            pathType: ImplementationSpecific
             backend:
               serviceName: istio-ingressgateway 
               servicePort: 443
