@@ -13,10 +13,10 @@ spec:
       secretName: kubeflow-ingress-cert
   rules:
     - host: kubeflow.strasser-kub.ch
-      http:
+      https:
         paths:
           - path: /
             pathType: ImplementationSpecific
             backend:
               serviceName: istio-ingressgateway 
-              servicePort: TCPhttps
+              servicePort: 443
