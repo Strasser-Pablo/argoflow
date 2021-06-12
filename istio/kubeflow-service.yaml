@@ -5,10 +5,12 @@ metadata:
   namespace: istio-system
 spec:
   ports:
-    - protocol: TCP
+    - name: p1 
+      protocol: TCP
       port: 15021
       targetPort: 15021
-    - protocol: TCP
+    - name: p2
+      protocol: TCP
       port: 80
       targetPort: 80
     - name: https
