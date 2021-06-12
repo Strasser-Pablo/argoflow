@@ -5,12 +5,12 @@ metadata:
   namespace: istio-system
   annotations:
     cert-manager.io/cluster-issuer: letsencrypt-prod
-    kubernetes.io/ingress.class: istio
 spec:
   tls:
     - hosts:
         - kubeflow.strasser-kub.ch
       secretName: kubeflow-ingress-cert
+  ingressClassName: istio
   rules:
     - host: kubeflow.strasser-kub.ch
       http:
