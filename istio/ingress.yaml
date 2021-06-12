@@ -17,5 +17,5 @@ spec:
         paths:
           - path: /
             backend:
-              serviceName: istio-ingressgateway-service2 
+              serviceName: istio-ingressgateway-service3 
               servicePort: 443 
