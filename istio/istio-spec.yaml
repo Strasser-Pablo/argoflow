@@ -10,8 +10,3 @@ spec:
   meshConfig:
     accessLogFile: /dev/stdout
     enablePrometheusMerge: true
-    enableTracing: true
-  components:
-    ingressGateways:
-    - name: ingressgateway
-      enabled: true

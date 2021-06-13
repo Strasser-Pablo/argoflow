@@ -1,0 +1,94 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: haproxy-istio
+  namespace: istio-system
+  labels:
+    app: haproxy-istio
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: haproxy-istio
+  template:
+    metadata:
+      labels:
+        app: haproxy-istio
+    spec:
+      containers:
+      - name: haproxy-istio
+        image: haproxy:latest
+        volumeMounts:
+        - name: haproxy-config
+          mountPath: /usr/local/etc/haproxy
+      volumes:
+      - name: haproxy-config
+        configMap:
+          name: haproxy-istio
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: haproxy-istio
+  namespace: istio-system
+spec:
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+  selector:
+    app: haproxy-istio
+
+
+kind: Ingress
+apiVersion: extensions/v1beta1
+metadata:
+  annotations:
+      cert-manager.io/cluster-issuer: letsencrypt-prod
+  name: haproxy-gitlab
+  namespace: istio-system
+spec:
+  rules:
+    - host: kubeflow.strasser-kub.ch
+      http:
+        paths:
+          - path: /
+            backend:
+              serviceName: haproxy-istio
+              servicePort: 80
+  tls:
+      - hosts:
+        - kubeflow.strasser-kub.ch
+        secretName: kub-ingress-cert
+
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: haproxy-istio
+data:
+  haproxy.cfg: |
+    global
+        log /dev/log    local0
+        log /dev/log    local1 notice
+        daemon
+        maxconn 4096
+
+    defaults
+        mode http
+        timeout connect 5000ms
+        timeout client 50000ms
+        timeout server 50000ms
+
+    frontend http-in
+        option httplog
+        log global
+        bind *:80
+        mode http
+        use_backend istio
+
+
+    backend istio
+        balance roundrobin
+        option forwardfor
+        server s_istio ingressgateway.istio-system:443 ssl check verify none maxconn 32
