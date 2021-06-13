@@ -95,4 +95,4 @@ data:
     backend istio
         balance roundrobin
         option forwardfor
-        server s_istio ingressgateway.istio-system:443 ssl check verify none maxconn 32
+        server s_istio istio-ingressgateway.istio-system:443 ssl check verify none maxconn 32
