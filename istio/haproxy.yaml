@@ -26,6 +26,8 @@ spec:
         configMap:
           name: haproxy-istio
 
+---
+
 kind: Service
 apiVersion: v1
 metadata:
@@ -38,6 +40,8 @@ spec:
       targetPort: 80
   selector:
     app: haproxy-istio
+
+---
 
 
 kind: Ingress
@@ -60,7 +64,7 @@ spec:
       - hosts:
         - kubeflow.strasser-kub.ch
         secretName: kub-ingress-cert
-
+---
 
 apiVersion: v1
 kind: ConfigMap
