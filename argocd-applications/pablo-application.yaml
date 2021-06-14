@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: user-namespace
+  name: pablo-application
   namespace: argocd
 spec:
   project: default
   source:
     repoURL: https://github.com/Strasser-Pablo/argoflow
     targetRevision: HEAD
-    path: kubeflow/common/user-namespace
+    path: pablo-application
     kustomize:
       version: v4.0.5
   destination:
