@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: abbcompression-mysql
-  namespace: abbcompression
+  namespace: abbcompressionheg
   labels:
     app: abbcompression-mysql
 spec:
