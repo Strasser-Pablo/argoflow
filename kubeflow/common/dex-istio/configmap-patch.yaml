@@ -24,6 +24,12 @@ data:
       # FIXME: Use hashFromEnv instead
       username: pablo
       userID: "15841185641784"
+    - email: abbcompressionheg@gmail.com
+      hash: $2y$12$q5noljDFL3N8B5MMs1qN9uZ.JrNBRpoyWGthzfNhL445Oiugz2zJ
+      # https://github.com/dexidp/dex/pull/1601/commits
+      # FIXME: Use hashFromEnv instead
+      username: abbcompressionheg 
+      userID: "15841185641785"
     staticClients:
     # https://github.com/dexidp/dex/pull/1664
     - idEnv: OIDC_CLIENT_ID
