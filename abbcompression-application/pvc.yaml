@@ -3,6 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: abbcompression-mysql
   namespace: abbcompressionheg
+  StorageClass: gluster-heketi-distributed 
 spec:
   accessModes:
     - ReadWriteOnce
