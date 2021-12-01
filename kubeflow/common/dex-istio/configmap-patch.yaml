@@ -25,7 +25,7 @@ data:
       username: pablo
       userID: "15841185641784"
     - email: abbcompressionheg@gmail.com
-      hash: $2y$12$q5noljDFL3N8B5MMs1qN9uZ.JrNBRpoyWGthzfNhL445Oiugz2zJ
+      hash: $2y$12$l9ohYTYBVeNEbtfwSYQWBOw/v4N0kljJTHJLw0bdfK8Dc65Gia4eG
       # https://github.com/dexidp/dex/pull/1601/commits
       # FIXME: Use hashFromEnv instead
       username: abbcompressionheg 
