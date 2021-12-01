@@ -4,7 +4,7 @@ metadata:
   name: abbcompression-mysql
   namespace: abbcompressionheg
 spec:
-  StorageClass: gluster-heketi-distributed 
+  storageClassName: gluster-heketi-distributed 
   accessModes:
     - ReadWriteOnce
   resources:
