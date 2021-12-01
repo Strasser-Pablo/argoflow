@@ -61,9 +61,9 @@ spec:
             periodSeconds: 15
             failureThreshold: 60
           volumeMounts:
-            - name: pablo-mysql
+            - name: abbcompression-mysql
               mountPath: /var/lib/mysql
       volumes:
-        - name: pablo-mysql
+        - name: abbcompression-mysql
           persistentVolumeClaim:
-            claimName: pablo-mysql
+            claimName: abbcompression-mysql
