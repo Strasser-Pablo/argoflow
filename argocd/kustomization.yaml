@@ -19,7 +19,6 @@ images:
 - name: quay.io/argoproj/argocd
   newName: quay.io/argoproj/argocd
   newTag: v2.2.3
-  # digest: sha256:8d1d58ef963f615da97e0b2c54dbe243801d5e7198b98393ab36b7a5768f72a4
 - name: haproxy
   newName: haproxy
   newTag: 2.0.20-alpine
