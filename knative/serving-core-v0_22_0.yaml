@@ -2600,6 +2600,13 @@ spec:
       app: webhook
 
 ---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: kube-root-ca.crt
+  namespace: knative-serving
+
+---
 # Copyright 2018 The Knative Authors
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
