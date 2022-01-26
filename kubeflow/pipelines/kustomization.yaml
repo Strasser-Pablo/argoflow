@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: kubeflow
 
 resources:
-- github.com/Strasser-Pablo/pipelines/manifests/kustomize/env/platform-agnostic-multi-user-pns?ref=7d5690a21cf8e8c464a6ddba520879bd30fd2ddc
+- github.com/Strasser-Pablo/pipelines/manifests/kustomize/env/platform-agnostic-multi-user-pns?ref=bafed3ea155f96a21646c69a641abcca1b14ab67
 
 images:
 - name: gcr.io/ml-pipeline/cache-deployer
@@ -56,6 +56,7 @@ images:
   # digest: sha256:6b11817b99538e890f3632f3b0e7c69d8c40126c162449ff7710b32e7cf99499
 - name: gcr.io/ml-pipeline/mysql
   newName: gcr.io/ml-pipeline/mysql
+  newTag: "8.0"
   # digest: sha256:4056370ee427dc9ff2337884674d8ee35f5b236c543bb8446b8b0a3751f70349
 - name: gcr.io/ml-pipeline/workflow-controller
   newName: gcr.io/ml-pipeline/workflow-controller
