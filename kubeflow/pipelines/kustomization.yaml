@@ -3,7 +3,7 @@ kind: Kustomization
 namespace: kubeflow
 
 resources:
-- github.com/Strasser-Pablo/pipelines/manifests/kustomize/env/platform-agnostic-multi-user-pns?ref=6895786c244ac3a4a85e34b6e295e4151a5886d4
+- github.com/Strasser-Pablo/pipelines/manifests/kustomize/env/platform-agnostic-multi-user-pns?ref=fa6b784f96a4786a32ea47e2fa8cbd5d064e7101
 
 images:
 - name: gcr.io/ml-pipeline/cache-deployer
