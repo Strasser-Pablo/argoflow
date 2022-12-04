@@ -37,6 +37,7 @@ resources:
 - argocd-applications/alexandros-namespace.yaml
 - argocd-applications/abbcompression-namespace.yaml
 - argocd-applications/abbcompression-application.yaml
+- argocd-applications/training-operator.yaml
 # - argocd-applications/experimental-pvcviewer-controller.yaml
 # - argocd-applications/experimental-volumes-web-app.yaml
 # Monitoring and logging
