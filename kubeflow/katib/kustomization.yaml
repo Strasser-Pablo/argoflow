@@ -3,3 +3,9 @@ kind: Kustomization
 
 resources:
 - github.com/Strasser-Pablo/katib/manifests/v1beta1/installs/katib-with-kubeflow?ref=master
+
+images:
+- name: mysql
+  newName: mysql
+  newTag: "8"
+  # digest: sha256:355617769102e9d2ebb7d5879263a12d230badb7271c91748b2c7b0ac6971083
