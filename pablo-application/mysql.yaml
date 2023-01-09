@@ -25,7 +25,6 @@ spec:
           args:
             - --datadir
             - /var/lib/mysql/datadir
-            - --innodb-force-recovery=1
           env:
             - name: MYSQL_ROOT_PASSWORD
               valueFrom:
